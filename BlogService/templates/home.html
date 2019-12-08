@@ -19,8 +19,11 @@
 </div>
 
 <div class="container">
-  <p>This is some text.</p>      
-  <p>This is another text.</p>      
+  {% for post in posts %}    
+        <h2> {{post.author}} </h2>
+        <h3> {{post.title}} </h3>
+        <p> {{post.body}} </p>
+  {% endfor %}        
 </div>
 
 </body>

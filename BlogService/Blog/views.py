@@ -3,7 +3,23 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, 'home.html')
+    posts = {
+       'posts': [
+               {
+                'id': 1,
+                'author': 'Emeka Augustine',
+                'title': 'Nigerian is a corrupt country!',
+                'body': 'The level of corruption in Nigeria is unbearable.'
+            },
+            {
+                'id': 2,
+                'author': 'Ben James',
+                'title': 'Ghana is a corrupt country!',
+                'body': 'The level of corruption in Ghana is too bad.'
+            }
+       ]
+    }
+    return render(request, 'home.html', posts)
 
 def about(request):
     return HttpResponse('<h1>Welcome To About Page!</h1>')
