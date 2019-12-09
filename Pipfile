@@ -5,10 +5,11 @@ verify_ssl = true
 
 [dev-packages]
 pylint = "*"
+pylint-django = "*"
 
 [packages]
 django = "*"
-mysql-connector-python = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.7"
