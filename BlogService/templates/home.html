@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
  
 {% block content %}
-  {% for post in posts %}    
-      <h2> {{post.author}} </h2>
-      <h3> {{post.title}} </h3>
-      <p> {{post.body}} </p>
-  {% endfor %} 
+
+  <div class="container">
+    <ul class="list-group list-group-flush">
+      {% for post in posts %}    
+          <li class="list-group-item"><h2>{{post.author}}</h2></li>
+          <li class="list-group-item"><h3>{{post.title}} </h3> </li>
+          <li class="list-group-item">{{post.body}}</li>
+      {% endfor %} 
+    </ul>
+  </div>
 {% endblock content %}  
